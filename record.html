@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>相關戰績</title>
+
+  <style>
+    @font-face {
+      font-family: 'cwTeXYen';
+      font-style: normal;
+      font-weight: 500;
+      src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+      src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
+        url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'cwTeXYen';
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    .header {
+      background-color: #000;
+      width: 100vw;
+      height: 15vh;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      margin-right: 20px;
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+    }
+
+    .site-name {
+      color: #fff;
+      font-size: 2em;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    .navtext {
+      color: #fff;
+      font-size: 1.2em;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: transform 0.3s;
+    }
+
+    .navtext:hover {
+      transform: scale(1.1);
+    }
+
+    .displayout {
+      position: relative;
+    }
+
+    .display {
+      display: none;
+      position: absolute;
+      min-width: 150px;
+      min-height: auto;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px 0px rgba(68, 63, 63, 0.2);
+      padding: 10px;
+      font-size: 0.9em;
+    }
+
+    .displayout:hover .display {
+      display: block;
+      background-color: #c8c8c8;
+      transform: translateX(-20%);
+      white-space: nowrap;
+      border-radius: 5px;
+    }
+
+    .display ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .display ul li {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .litext {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .litext:hover {
+      color: #555;
+      width: 30%;
+    }
+
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+      background-image: linear-gradient(black,white);
+      padding: 20px;
+      margin-bottom: 10px;
+      width: 100vw;
+    }
+    .title h1{
+      color: #d1d4d6;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .content {
+      background-color: #fff;
+      width: 100vw;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .bg_board {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .board {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .board th {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .board td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .board tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+
+    .board tr:last-child td {
+      border-bottom: none;
+    }
+
+    .board tr:hover {
+      background-color: #eaf6ff;
+    }
+
+    .board tr:hover td {
+      color: #333;
+    }
+    .footer-container {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(white,black,black);
+    margin-top: 50px;
+    width: 100vw;
+  }
+  
+  .footer {
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .left-logo {
+    width: 100px;
+  }
+  
+
+
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="./index.html"><img src="./img/LOGO.png" alt="Logo"></a>
+    </div>
+
+    <h1 class="site-name">元智棒球圈</h1>
+
+    <div class="nav">
+      <a class="navtext" href="./record.html">戰績</a>
+      <div class="displayout">
+        <a class="navtext" href="">球隊</a>
+        <div class="display">
+          <ul>
+            <li><a class="litext" href="./brother.html">中信兄弟</a></li>
+            <li><a class="litext" href="./dragon.html">味全龍</a></li>
+            <li><a class="litext" href="./guardian.html">富邦悍將</a></li>
+            <li><a class="litext" href="./lion.html">統一獅</a></li>
+            <li><a class="litext" href="./Monkey.html">樂天桃猿</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="displayout">
+        <a class="navtext" href="./topfive.html">數據</a>
+      </div>
+      <div class="displayout">
+        <a class="navtext" href="./girls/rakutengirls.html">啦啦隊</a>
+      </div>
+
+      <div class="displayout">
+        <a class="navtext" href="">消息</a>
+        <div class="display">
+          <ul>
+            <li><a class="litext" href="./news.html">近期新聞</a></li>
+            <li><a class="litext" href="./moment.html">精彩時刻</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <a class="navtext" href="./field.html">球場介紹</a>
+      <a class="navtext" href="./introduce.html">團隊自介</a>
+    </div>
+  </div>
+
+  </div>
+  <div class="title">
+    <h1>球隊戰績STANDING 2023年 上半季</h1>
+  </div>
+  <div class="content">
+    <h1>球隊對戰戰績</h1>
+    <div class="bg_board">
+      <table class="board">
+        <tr>
+          <th>排名</th>
+          <th>球隊</th>
+          <th>出賽數</th>
+          <th>勝-敗-和</th>
+          <th>統一7-ELEVEn獅</th>
+          <th>樂天桃猿</th>
+          <th>味全龍</th>
+          <th>中信兄弟</th>
+          <th>富邦悍將</th>
+          <th>主場戰績</th>
+          <th>客場戰績</th>
+          <th>近十場戰績</th>
+          <th>勝率</th>
+          <th>勝差</th>
+          <th>連勝/連敗</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>統一7-ELEVEn獅</td>
+          <td>46</td>
+          <td>26-1-19 </td>
+          <td></td>
+          <td>7-0-3</td>
+          <td>8-1-3</td>
+          <td>5-0-8</td>
+          <td>6-0-5</td>
+          <td>15-0-9</td>
+          <td>11-1-10 </td>
+          <td>6-0-4</td>
+          <td>0.578</td>
+          <td>-</td>
+          <td>勝2</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>樂天桃猿</td>
+          <td>45</td>
+          <td>22-1-22</td>
+          <td>3-0-7</td>
+          <td></td>
+          <td>4-0-7</td>
+          <td>7-0-4</td>
+          <td>8-1-4</td>
+          <td>9-1-13</td>
+          <td>13-0-9</td>
+          <td>3-0-7</td>
+          <td>0.5</td>
+          <td>3.5</td>
+          <td>敗2</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>味全龍</td>
+          <td>46</td>
+          <td>22-2-22</td>
+          <td>3-1-8</td>
+          <td>7-0-4</td>
+          <td></td>
+          <td>7-1-3</td>
+          <td>5-0-7</td>
+          <td>10-2-10</td>
+          <td>12-0-12</td>
+          <td>5-1-4</td>
+          <td>0.5</td>
+          <td>3.5</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>富邦悍將</td>
+          <td>47</td>
+          <td>20-3-24</td>
+          <td>5-0-6</td>
+          <td>4-1-8</td>
+          <td>7-0-5</td>
+          <td>4-2-5</td>
+          <td></td>
+          <td>10-1-13</td>
+          <td>10-2-11</td>
+          <td>5-0-5</td>
+          <td>0.455</td>
+          <td>5.5</td>
+          <td>敗2</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>中信兄弟</td>
+          <td>46</td>
+          <td>20-3-23</td>
+          <td>8-0-5</td>
+          <td>4-0-7</td>
+          <td>3-1-7</td>
+          <td></td>
+          <td>5-2-4</td>
+          <td>7-1-14</td>
+          <td>13-2-9</td>
+          <td>4-1-5</td>
+          <td>0.465</td>
+          <td>5</td>
+          <td>勝1</td>
+        </tr>
+      </table>
+
+    </div>
+    <h1>團隊守備成績</h1>
+    <div class="bg_board">
+      <table class="board">
+        <tr>
+          <th>球隊</th>
+          <th>出賽數</th>
+          <th>守備機會</th>
+          <th>刺殺</th>
+          <th>助殺</th>
+          <th>失誤</th>
+          <th>雙殺</th>
+          <th>三殺</th>
+          <th>牽制出局</th>
+          <th>捕逸</th>
+          <th>盜壘阻殺</th>
+          <th>被盜成功</th>
+          <th>守備率</th>
+        </tr>
+        <tr>
+          <td>統一7-ELEVEn獅</td>
+          <td>46</td>
+          <td>1700</td>
+          <td>1224</td>
+          <td>443</td>
+          <td>33</td>
+          <td>109</td>
+          <td>0</td>
+          <td>2</td>
+          <td>3</td>
+          <td>15</td>
+          <td>23</td>
+          <td>0.981</td>
+        </tr>
+        <tr>
+          <td>味全龍</td>
+          <td>47</td>
+          <td>1740</td>
+          <td>1240</td>
+          <td>462</td>
+          <td>38</td>
+          <td>143</td>
+          <td>0</td>
+          <td>0</td>
+          <td>7</td>
+          <td>14</td>
+          <td>34</td>
+          <td>0.978</td>
+        </tr>
+        <tr>
+          <td>樂天桃猿</td>
+          <td>46</td>
+          <td>1789</td>
+          <td>1240</td>
+          <td>490</td>
+          <td>59</td>
+          <td>125</td>
+          <td>0</td>
+          <td>8</td>
+          <td>3</td>
+          <td>10</td>
+          <td>31</td>
+          <td>0.967</td>
+        </tr>
+        <tr>
+          <td>中信兄弟</td>
+          <td>47</td>
+          <td>1778</td>
+          <td>1275</td>
+          <td>475</td>
+          <td>28</td>
+          <td>141</td>
+          <td>0</td>
+          <td>2</td>
+          <td>4 </td>
+          <td>13</td>
+          <td>19</td>
+          <td>0.984</td>
+        </tr>
+        <tr>
+          <td>富邦悍將</td>
+          <td>48</td>
+          <td>1849</td>
+          <td>1285</td>
+          <td>524</td>
+          <td>40</td>
+          <td>108</td>
+          <td>0</td>
+          <td>12</td>
+          <td>4</td>
+          <td>12</td>
+          <td>25</td>
+          <td>0.978</td>
+        </tr>
+      </table>
+
+    </div>
+    <h1>團隊打擊成績</h1>
+    <div class="bg_board">
+      <table class="board">
+        <tr>
+          <th>球隊</th>
+          <th>出賽數</th>
+          <th>打數</th>
+          <th>得分</th>
+          <th>打點</th>
+          <th>安打</th>
+          <th>全壘打</th>
+          <th>壘打數</th>
+          <th>三振</th>
+          <th>四壞球</th>
+          <th>盜壘成功</th>
+          <th>上壘率</th>
+          <th>長打率</th>
+          <th>打擊率</th>
+        </tr>
+        <tr>
+          <td>統一7-ELEVEn獅</td>
+          <td>46</td>
+          <td>1552</td>
+          <td>209</td>
+          <td>194</td>
+          <td>419</td>
+          <td>30</td>
+          <td>581</td>
+          <td>258</td>
+          <td>156</td>
+          <td>20</td>
+          <td>0.343</td>
+          <td>0.374</td>
+          <td>0.270</td>
+        </tr>
+        <tr>
+          <td>味全龍</td>
+          <td>47</td>
+          <td>1534</td>
+          <td>172</td>
+          <td>162</td>
+          <td>373</td>
+          <td>22</td>
+          <td>508</td>
+          <td>320</td>
+          <td>147</td>
+          <td>36</td>
+          <td>0.318</td>
+          <td>0.331</td>
+          <td>0.243</td>
+        </tr>
+        <tr>
+          <td>樂天桃猿</td>
+          <td>46</td>
+          <td>1594</td>
+          <td>208</td>
+          <td>200</td>
+          <td>444</td>
+          <td>29</td>
+          <td>635</td>
+          <td>289</td>
+          <td>122</td>
+          <td>25</td>
+          <td>0.334</td>
+          <td>0.398</td>
+          <td>0.279</td>
+        </tr>
+        <tr>
+          <td>中信兄弟</td>
+          <td>47</td>
+          <td>1616</td>
+          <td>201</td>
+          <td>184</td>
+          <td>402</td>
+          <td>20</td>
+          <td>544</td>
+          <td>320</td>
+          <td>166</td>
+          <td>30</td>
+          <td>0.322</td>
+          <td>0.337</td>
+          <td>0.249</td>
+        </tr>
+        <tr>
+          <td>富邦悍將</td>
+          <td>48</td>
+          <td>1621</td>
+          <td>183</td>
+          <td>169</td>
+          <td>408</td>
+          <td>21</td>
+          <td>560</td>
+          <td>313</td>
+          <td>145</td>
+          <td>34</td>
+          <td>0.324</td>
+          <td>0.345</td>
+          <td>0.252</td>
+        </tr>
+      </table>
+
+    </div>
+    <h1>團隊投球成績</h1>
+    <div class="bg_board">
+      <table class="board">
+        <tr>
+          <th>球隊</th>
+          <th>出賽數</th>
+          <th>面對打席</th>
+          <th>投球數</th>
+          <th>被安打</th>
+          <th>被全壘打</th>
+          <th>四壞球</th>
+          <th>奪三振</th>
+          <th>暴投</th>
+          <th>犯規</th>
+          <th>失分</th>
+          <th>自責分</th>
+          <th>每局被上壘率</th>
+          <th>防禦率</th>
+        </tr>
+        <tr>
+          <td>統一7-ELEVEn獅</td>
+          <td>46</td>
+          <td>1678</td>
+          <td>6569</td>
+          <td>343</td>
+          <td>20</td>
+          <td>136</td>
+          <td>310</td>
+          <td>15</td>
+          <td>1</td>
+          <td>144</td>
+          <td>119</td>
+          <td>1.17</td>
+          <td>2.63</td>
+        </tr>
+        <tr>
+          <td>味全龍</td>
+          <td>47</td>
+          <td>1797</td>
+          <td>6705</td>
+          <td>402</td>
+          <td>24</td>
+          <td>164</td>
+          <td>287</td>
+          <td>18</td>
+          <td>1</td>
+          <td>198</td>
+          <td>178</td>
+          <td>1.37</td>
+          <td>3.88</td>
+        </tr>
+        <tr>
+          <td>樂天桃猿</td>
+          <td>46</td>
+          <td>1853</td>
+          <td>7052</td>
+          <td>450</td>
+          <td>31</td>
+          <td>155</td>
+          <td>289</td>
+          <td>24</td>
+          <td>2</td>
+          <td>231</td>
+          <td>196</td>
+          <td>1.46</td>
+          <td>4.27</td>
+        </tr>
+        <tr>
+          <td>中信兄弟</td>
+          <td>47</td>
+          <td>1824</td>
+          <td>6807</td>
+          <td>435</td>
+          <td>34</td>
+          <td>141</td>
+          <td>303</td>
+          <td>14</td>
+          <td>1</td>
+          <td>205</td>
+          <td>186</td>
+          <td>1.36</td>
+          <td>3.94</td>
+        </tr>
+        <tr>
+          <td>富邦悍將</td>
+          <td>48</td>
+          <td>1823</td>
+          <td>6901</td>
+          <td>416</td>
+          <td>13</td>
+          <td>140</td>
+          <td>311</td>
+          <td>23</td>
+          <td>1</td>
+          <td>195</td>
+          <td>161</td>
+          <td>1.30</td>
+          <td>3.38</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+  <div class="footer-container">
+    <div class="footer">
+      <div class="left-logo">
+        <img src="./img/LOGO.png" alt="Left Logo" width="100" height="100">
+      </div>
+      <div class="footer-content">
+        <h1>YZUBK</h1>
+        <p>Web Design: 2023</p>
+        <p>網站素材僅供作業使用，如有侵權請告知</p>
+        <address>聯絡電話: 0909771056</address>
+        <address>郵件: <a href="mailto:danwei2003@gmail.com">點擊我</a></address>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</body>
+
+</html>

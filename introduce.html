@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>自我介紹</title>
+  <style>
+    @font-face {
+      font-family: 'cwTeXYen';
+      font-style: normal;
+      font-weight: 500;
+      src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+      src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
+        url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'cwTeXYen';
+    }
+
+    body {
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+        background-image: linear-gradient(black,black,black,white);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      height: 15vh;
+    }
+
+    .logo {
+      margin-right: 20px;
+    }
+
+    .logo img {
+      height: 80px;
+      width: auto;
+    }
+
+    .site-name {
+      color: #fff;
+      font-size: 2em;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    .navtext {
+      color: #fff;
+      font-size: 1.2em;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: transform 0.3s;
+    }
+
+    .navtext:hover {
+      transform: scale(1.1);
+    }
+
+    .displayout {
+      position: relative;
+    }
+
+    .display {
+      display: none;
+      position: absolute;
+      min-width: 150px;
+      min-height: auto;
+      background-color: #fff;
+      box-shadow: 0px 8px 16px 0px rgba(68, 63, 63, 0.2);
+      padding: 10px;
+      font-size: 0.9em;
+    }
+
+    .displayout:hover .display {
+      display: block;
+      background-color: #c8c8c8;
+      transform: translateX(-20%);
+      white-space: nowrap;
+      border-radius: 5px;
+    }
+
+    .display ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .display ul li {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .litext {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .litext:hover {
+      color: #555;
+      width: 30%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .profile img {
+      width: 10vw;
+      height: auto;
+      border-radius: 5%;
+      margin-right: 20px;
+    }
+
+    .profile .content {
+      flex-grow: 1;
+    }
+
+    .profile h2 {
+      font-size: 24px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .profile p {
+      font-size: 16px;
+      margin: 0;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      background-image: linear-gradient(white,black,black,black);
+      color: white;
+      margin-top: 50px;
+    }
+
+    .footer {
+        
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      width: 90vw;
+    }
+
+    .left-logo {
+      width: 100px;
+    }
+
+    .footer-content {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="logo">
+    <a href="./index.html"><img src="./img/LOGO.png" alt="Logo"></a>
+  </div>
+
+  <h1 class="site-name">元智棒球圈</h1>
+
+  <div class="nav">
+    <a class="navtext" href="./record.html">戰績</a>
+    <div class="displayout">
+      <a class="navtext" href="">球隊</a>
+      <div class="display">
+        <ul>
+          <li><a class="litext" href="./brother.html">中信兄弟</a></li>
+          <li><a class="litext" href="./dragon.html">味全龍</a></li>
+          <li><a class="litext" href="./guardian.html">富邦悍將</a></li>
+          <li><a class="litext" href="./lion.html">統一獅</a></li>
+          <li><a class="litext" href="./Monkey.html">樂天桃猿</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="displayout">
+      <a class="navtext" href="./topfive.html">數據</a>
+    </div>
+    <div class="displayout">
+      <a class="navtext" href="./girls/rakutengirls.html">啦啦隊</a>
+    </div>
+
+    <div class="displayout">
+      <a class="navtext" href="">消息</a>
+      <div class="display">
+        <ul>
+          <li><a class="litext" href="./news.html">近期新聞</a></li>
+          <li><a class="litext" href="./moment.html">精彩時刻</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <a class="navtext" href="./field.html">球場介紹</a>
+    <a class="navtext" href="./introduce.html">團隊自介</a>
+  </div>
+</div>
+<div class="container">
+  <div class="profile">
+    <img src="./img/11.jpg" alt="">
+    <div class="content">
+      <h2>1112004陳建強</h2>
+      <p>大家好，我是陳建強，在這個期末Web專題，我主要負責做首頁的製作、球隊、球場的製作，以及負責修正其他組員給我檔案的跑版、版面、配色等等其他問題。</p>
+      <p>在製作這個網站讓我覺得最困難的就是設計版面了，在之前的平時作業中，設計的成分並不是太多，主要考驗我們對指令的熟悉，設計是其次，但是這次的奇末作業簿只考驗我們對指令的熟悉度，整體的設計美感也是很重要的。</p>
+    </div>
+  </div>
+  <div class="profile">
+    <img src="./img/22.jpg" alt="">
+    <div class="content">
+      <h2>1112029魏宏達</h2>
+      <p>大家好我叫魏宏達是資訊傳播系科技組一年級，我這次專案負責的部分是消息與戰績與footer版面設計，在這次的專案中我了解團隊分工與時間分配的重要性，要好好把握好時間才有時間處理細節。</p>
+    </div>
+  </div>
+  <div class="profile">
+    <img src="./img/33.jpg" alt="">
+    <div class="content">
+      <h2>1112010 施景瀚</h2>
+      <p>大家好，我是施景瀚，在這個基礎程式設計期末Web專題裡，我負責了功能預想、實際製作、啦啦隊製作、進行網頁測試，以及給組員棒球數據建議。在製作的過程中發現網頁有許多數據要一一的打上去，非常的累</p>
+      <P>還有用vscode編輯網頁時，會發生組員之間的網頁程式碼風格不同，例如有些人會直接把css放在html的style裡，有些人另外放在其他資料夾，造成溝通會有一些困難，這都是我們要去克服的問題。還有我覺得網頁使用到javascript非常的麻煩，常常因為一個字打錯，而不會產生效果。</P>
+    </div>
+  </div>
+</div>
+<div class="footer-container">
+  <div class="footer">
+    <div class="left-logo">
+      <img src="./img/LOGO.png" alt="Left Logo" width="100" height="100">
+    </div>
+    <div class="footer-content">
+      <h1>YZUBK</h1>
+      <p>Web Design: 2023</p>
+      <p>網站素材僅供作業使用，如有侵權請告知</p>
+      <address>聯絡電話: 0909771056</address>
+      <address>郵件: <a href="mailto:danwei2003@gmail.com">點擊我</a></address>
+    </div>
+  </div>
+</div>
+</body>
+</html>

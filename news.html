@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>近期新聞</title>
+</head>
+
+<style>
+    @font-face {
+        font-family: 'cwTeXYen';
+        font-style: normal;
+        font-weight: 500;
+        src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+        src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
+            url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
+            url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
+            url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'cwTeXYen';
+    }
+
+    body {
+        background-color: #f5f5f5;
+    }
+
+    .header {
+        background-color: #000;
+        width: 100vw;
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .logo {
+        margin-right: 20px;
+    }
+
+    .logo img {
+        height: 80px;
+        width: auto;
+    }
+
+    .site-name {
+        color: #fff;
+        font-size: 2em;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .navtext {
+        color: #fff;
+        font-size: 1.2em;
+        text-decoration: none;
+        margin-left: 20px;
+        transition: transform 0.3s;
+    }
+
+    .navtext:hover {
+        transform: scale(1.1);
+    }
+
+    .displayout {
+        position: relative;
+    }
+
+    .display {
+        display: none;
+        position: absolute;
+        min-width: 150px;
+        min-height: auto;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(68, 63, 63, 0.2);
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .displayout:hover .display {
+        display: block;
+        background-color: #c8c8c8;
+        transform: translateX(-20%);
+        white-space: nowrap;
+        border-radius: 5px;
+    }
+
+    .display ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .display ul li {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .litext {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .litext:hover {
+        color: #555;
+        width: 30%;
+    }
+
+    /* ------------------------ */
+    .title{
+        text-align: center;
+        background-color: #000;
+        color: #f5f5f5;
+        font-size: larger;
+        width: 100vw;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+        padding: 100px 0px 0px 0px;
+        background-image: linear-gradient(black, gray);
+        width: 100vw;
+    }
+
+    .block {
+        position: relative;
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        width: 50vw;
+        margin: 0 auto;
+    }
+
+    .block:hover {
+        transform: scale(1.1);
+    }
+
+    .block img {
+        display: block;
+        width: 100%;
+        height: 90%;
+        border: 4px solid #fff;
+        border-radius: 10px;
+    }
+
+    .block p {
+        color: #fff;
+        margin-top: 10px;
+        font-size: larger;
+    }
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(gray,black,black);
+    width: 100vw;
+  }
+  
+  .footer {
+    color: white;
+    padding: 20px;
+    display: flex;
+  }
+  
+  .left-logo {
+    width: 100px;
+  }
+
+
+</style>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="./index.html"><img src="./img/LOGO.png" alt="Logo"></a>
+        </div>
+
+        <h1 class="site-name">元智棒球圈</h1>
+
+        <div class="nav">
+            <a class="navtext" href="./record.html">戰績</a>
+            <div class="displayout">
+                <a class="navtext" href="">球隊</a>
+                <div class="display">
+                    <ul>
+                        <li><a class="litext" href="./brother.html">中信兄弟</a></li>
+                        <li><a class="litext" href="./dragon.html">味全龍</a></li>
+                        <li><a class="litext" href="./guardian.html">富邦悍將</a></li>
+                        <li><a class="litext" href="./lion.html">統一獅</a></li>
+                        <li><a class="litext" href="./Monkey.html">樂天桃猿</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="displayout">
+                <a class="navtext" href="./topfive.html">數據</a>
+              </div>
+              <div class="displayout">
+                <a class="navtext" href="./girls/rakutengirls.html">啦啦隊</a>
+              </div>
+              
+            <div class="displayout">
+                <a class="navtext" href="">消息</a>
+                <div class="display">
+                    <ul>
+                        <li><a class="litext" href="./news.html">近期新聞</a></li>
+                        <li><a class="litext" href="./moment.html">精彩時刻</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a class="navtext" href="./field.html">球場介紹</a>
+            <a class="navtext" href="./introduce.html">團隊自介</a>
+        </div>
+    </div>
+    <div class="title">
+        <h1>NEW</h1>
+    </div>
+    <div class="container">
+        <div class="block">
+            <a href="./news1.html"><img src="./news img/069a4972.jpg" alt=""></a>
+            <p>金安好投封鎖獅 象保1分差贏球</p>
+        </div>
+        <div class="block">
+            <a href="./news2.html"><img src="./news img/22.jpg" alt=""></a>
+            <p>「雙郭」好投猛打 味全7:4勝樂天</p>
+        </div>
+        <div class="block">
+            <a href="./news3.html"><img src="./news img/6.jpeg" alt=""></a>
+            <p>陳仕朋演出優質先發 富邦3:2勝統一</p>
+        </div>
+        <div class="block">
+            <a href="./news4.html"><img src="./news img/s__3268806.jpg" alt=""></a>
+            <p>雷法7局好投 猿隊1分差擊敗龍隊</p>
+        </div>
+        <div class="block">
+            <a href="./news5.html"><img src="./news img/yua09570.jpg" alt=""></a>
+            <p>張志豪追平安又開轟 象隊單局海灌7分逆轉勝</p>
+        </div>
+        <div class="block">
+            <a href="./news6.html"><img src="./news img/pic.jpg" alt=""></a>
+            <p>2023台灣未來之星棒球邀請賽開幕日 洲際台南兩地開打</p>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer">
+          <div class="left-logo">
+            <img src="./img/LOGO.png" alt="Left Logo" width="100" height="100">
+          </div>
+          <div class="footer-content">
+            <h1>YZUBK</h1>
+            <p>Web Design: 2023</p>
+            <p>網站素材僅供作業使用，如有侵權請告知</p>
+            <address>聯絡電話: 0909771056</address>
+            <address>郵件: <a href="mailto:danwei2003@gmail.com">點擊我</a></address>
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>

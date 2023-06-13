@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷法7局好投 猿隊1分差擊敗龍隊</title>
+</head>
+
+<style>
+    @font-face {
+        font-family: 'cwTeXYen';
+        font-style: normal;
+        font-weight: 500;
+        src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+        src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
+            url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
+            url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
+            url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'cwTeXYen';
+        text-decoration: none;
+    }
+
+    body {
+        background-color: #f5f5f5;
+    }
+
+    .header {
+        background-color: #000;
+        width: 100vw;
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .logo {
+        margin-right: 20px;
+    }
+
+    .logo img {
+        height: 80px;
+        width: auto;
+    }
+
+    .site-name {
+        color: #fff;
+        font-size: 2em;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .navtext {
+        color: #fff;
+        font-size: 1.2em;
+        text-decoration: none;
+        margin-left: 20px;
+        transition: transform 0.3s;
+    }
+
+    .navtext:hover {
+        transform: scale(1.1);
+    }
+
+    .displayout {
+        position: relative;
+    }
+
+    .display {
+        display: none;
+        position: absolute;
+        min-width: 150px;
+        min-height: auto;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(68, 63, 63, 0.2);
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .displayout:hover .display {
+        display: block;
+        background-color: #c8c8c8;
+        transform: translateX(-20%);
+        white-space: nowrap;
+        border-radius: 5px;
+    }
+
+    .display ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .display ul li {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .litext {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .litext:hover {
+        color: #555;
+        width: 30%;
+    }
+
+    /* ------------------------ */
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .article {
+        margin-bottom: 40px;
+    }
+
+    .article h1 {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .article img {
+        display: block;
+        margin: auto;
+        max-height: 600px;
+        max-width: 600px;
+    }
+
+    .article hr {
+        margin: 20px 0;
+        border: none;
+        border-top: 1px solid #ccc;
+    }
+
+    .article span {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .bot {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(white, black, black);
+        margin-top: 50px;
+        width: 100vw;
+
+    }
+
+    .footer {
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-logo {
+        width: 100px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="./index.html"><img src="./img/LOGO.png" alt="Logo"></a>
+        </div>
+
+        <h1 class="site-name">元智棒球圈</h1>
+
+        <div class="nav">
+            <a class="navtext" href="./record.html">戰績</a>
+            <div class="displayout">
+                <a class="navtext" href="">球隊</a>
+                <div class="display">
+                    <ul>
+                        <li><a class="litext" href="./brother.html">中信兄弟</a></li>
+                        <li><a class="litext" href="./dragon.html">味全龍</a></li>
+                        <li><a class="litext" href="./guardian.html">富邦悍將</a></li>
+                        <li><a class="litext" href="./lion.html">統一獅</a></li>
+                        <li><a class="litext" href="./Monkey.html">樂天桃猿</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="displayout">
+                <a class="navtext" href="./topfive.html">數據</a>
+            </div>
+            <div class="displayout">
+                <a class="navtext" href="./girls/rakutengirls.html">啦啦隊</a>
+            </div>
+
+            <div class="displayout">
+                <a class="navtext" href="">消息</a>
+                <div class="display">
+                    <ul>
+                        <li><a class="litext" href="./news.html">近期新聞</a></li>
+                        <li><a class="litext" href="./moment.html">精彩時刻</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a class="navtext" href="./field.html">球場介紹</a>
+            <a class="navtext" href="./introduce.html">團隊自介</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="title">
+            <h1>News</h1>
+        </div>
+        <div class="article">
+            <h1>雷法7局好投 猿隊1分差擊敗龍隊</h1>
+            <img src="./news img/s__3268806.jpg">
+            <hr>
+            <span>
+                樂天桃猿6日作客天母球場，先發投手雷法繳出7局僅失1分好投，助隊2:1擊敗味全龍，與戰績龍頭統一7-ELEVEn獅勝差縮小至兩場。
+
+                猿隊首局靠成晉觸身球上壘展開攻勢，楊晉豪敲安形成一、三壘有人，朱育賢擊出帶2打點安打，猿隊2:0領先。下半局龍隊有所回應，李凱威二壘打攻占得點圈，林孝程以高飛犧牲打助隊先馳得點，將球隊落後縮小至1分差。
+
+                龍隊先發投手吳俊杰度過首局亂流後漸入佳境，僅在第3局及第4局被敲出零星安打、連4局無失分，退場後呂詠臻、王維中、陳冠偉與林凱威各1局投球無失分，投手群展現突出壓制力。
+
+                不過龍隊打者火力也遭壓制，面對雷法7局擊出5支安打拿到1分，蘇俊璋、豪勁各1局投球，僅從兩位投手手中獲得1次保送、沒有擊出安打，雙方僅在首局攻破得分大門，猿隊2:1帶走勝利。
+
+                雷法7局僅被擊出5支安打，送出8張老K，投出兩次四壞球保送，僅失1責失，取得3連勝0敗、防禦率2.95，獲選為單場MVP;蘇俊璋取得第7次中繼成功、名列中繼榜第3;豪勁進帳第11次救援成功，位居救援榜榜首。
+        </div>
+        <div class="bot">
+            <a href="./news.html">&lt返回上一頁</a>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer">
+            <div class="left-logo">
+                <img src="./img/LOGO.png" alt="Left Logo" width="100" height="100">
+            </div>
+            <div class="footer-content">
+                <h1>YZUBK</h1>
+                <p>Web Design: 2023</p>
+                <p>網站素材僅供作業使用，如有侵權請告知</p>
+                <address>聯絡電話: 0909771056</address>
+                <address>郵件: <a href="mailto:danwei2003@gmail.com">點擊我</a></address>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
